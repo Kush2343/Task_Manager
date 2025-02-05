@@ -21,9 +21,10 @@ async function connectToDatabase() {
 
 connectToDatabase()
 
-app.get("/",async (res) =>{
-  res.send("Backend Of TaskManger run...");
-})
+app.get("/", async (req, res) => {
+  res.send("Backend Of TaskManager run...");
+});
+
 
 app.get("/tasks", async (req, res) => {
   try {

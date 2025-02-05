@@ -21,6 +21,10 @@ async function connectToDatabase() {
 
 connectToDatabase()
 
+app.get("/",async (res) =>{
+  res.send("Backend Of TaskManger run...");
+})
+
 app.get("/tasks", async (req, res) => {
   try {
     const database = client.db("taskdb")
